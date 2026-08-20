@@ -1,0 +1,69 @@
+:root {
+  /* ===== Paleta S3Bank ===== */
+  /* Fundo — "espaço profundo", referência ao metal escovado escuro dos cartões */
+  --s3-bg: #0a0b14;
+  --s3-bg-elevated: #12142266;
+  --s3-surface: #12132072;
+  --s3-surface-solid: #14152400;
+
+  /* Gradiente de marca — extraído do cartão Diamante */
+  --s3-violet: #6f42c1;
+  --s3-blue: #3355d3;
+  --s3-cobalt: #1e2b88;
+
+  /* Tons de apoio dos outros cartões */
+  --s3-gold: #cba15c;
+  --s3-gold-dark: #8a6a2f;
+  --s3-silver: #c0c0c0;
+  --s3-silver-dark: #8e8e93;
+  --s3-magenta: #d61f7a;
+
+  --s3-white: #ffffff;
+  --s3-ink: #eef0fb;
+  --s3-muted: #9a9db8;
+  --s3-muted-2: #6b6e8a;
+  --s3-line: #ffffff1a;
+  --s3-line-strong: #ffffff33;
+
+  --s3-gradient-brand: linear-gradient(135deg, #6f42c1 0%, #3355d3 50%, #1e2b88 100%);
+  --s3-gradient-brand-soft: linear-gradient(135deg, #6f42c133 0%, #3355d31a 50%, #1e2b8800 100%);
+  --s3-gradient-text: linear-gradient(90deg, #b48cff 0%, #6f8bff 55%, #7dd8ff 100%);
+
+  /* ===== Tipografia =====
+     Display: Space Grotesk — geométrica, técnica, remete a extrato/terminal bancário
+     Corpo: Inter — leitura confortável em textos longos de produto financeiro
+     Dados/mono: Space Mono — números de cartão, valores, rótulos técnicos */
+  --font-display: 'Space Grotesk', 'Inter', sans-serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+  --font-mono: 'Space Mono', 'Courier New', monospace;
+
+  /* ===== Espaçamento ===== */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 140px;
+
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --radius-card: 20px;
+
+  --container-w: 1200px;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

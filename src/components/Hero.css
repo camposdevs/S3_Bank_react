@@ -1,0 +1,179 @@
+.hero {
+  position: relative;
+  z-index: 1;
+  padding: var(--space-8) 0 var(--space-9);
+}
+
+.hero__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.hero__copy h1 {
+  margin-top: var(--space-4);
+  font-size: clamp(38px, 5vw, 60px);
+  font-weight: 600;
+}
+
+.hero__gradient {
+  background: var(--s3-gradient-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero__lead {
+  margin-top: var(--space-5);
+  max-width: 460px;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--s3-muted);
+}
+
+.hero__actions {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+.hero__stats {
+  display: flex;
+  gap: var(--space-7);
+  margin-top: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--s3-line);
+}
+
+.hero__stats strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.hero__stats span {
+  display: block;
+  margin-top: 4px;
+  font-size: 13px;
+  color: var(--s3-muted-2);
+  max-width: 120px;
+}
+
+/* ---- Palco do cartão (elemento assinatura) ---- */
+.hero__stage-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.hero__stage {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  aspect-ratio: 1.15 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1200px;
+}
+
+.hero__stage-glow {
+  position: absolute;
+  inset: 8%;
+  background: var(--glow, #6f42c1);
+  filter: blur(70px);
+  opacity: 0.35;
+  border-radius: 50%;
+  transition: background 0.5s var(--ease-out);
+  pointer-events: none;
+}
+
+.hero__card {
+  position: relative;
+  width: 84%;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow:
+    0 30px 60px -20px #00000090,
+    0 0 0 1px #ffffff14;
+  transition: transform 0.25s var(--ease-out);
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.hero__card img {
+  width: 100%;
+  display: block;
+}
+
+.hero__tiers {
+  display: flex;
+  gap: var(--space-2);
+  padding: 6px;
+  background: #ffffff0d;
+  border: 1px solid var(--s3-line);
+  border-radius: 999px;
+}
+
+.hero__tier {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 9px 16px;
+  border-radius: 999px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--s3-muted);
+  transition: background 0.3s var(--ease-out), color 0.3s var(--ease-out);
+}
+
+.hero__tier-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.hero__tier.is-active {
+  background: #ffffff1a;
+  color: var(--s3-white);
+}
+
+@media (max-width: 980px) {
+  .hero__row {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__copy {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero__stats {
+    justify-content: center;
+  }
+
+  .hero__stats span {
+    max-width: none;
+  }
+
+  .hero__stage-wrap {
+    order: -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero__stats {
+    gap: var(--space-5);
+    flex-wrap: wrap;
+  }
+}

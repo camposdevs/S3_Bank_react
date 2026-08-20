@@ -1,0 +1,29 @@
+.logostrip {
+  position: relative;
+  z-index: 1;
+  border-top: 1px solid var(--s3-line);
+  border-bottom: 1px solid var(--s3-line);
+  padding: var(--space-5) 0;
+}
+
+.logostrip__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-4) var(--space-6);
+}
+
+.logostrip__item {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  letter-spacing: 0.04em;
+  color: var(--s3-muted-2);
+  white-space: nowrap;
+}
+
+@media (max-width: 720px) {
+  .logostrip__row {
+    justify-content: center;
+    text-align: center;
+  }
+}

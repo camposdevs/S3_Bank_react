@@ -12,7 +12,7 @@ export default function AppShowcase() {
     <section className="section appshow" id="app">
       <div className="container appshow__row">
         <div className="appshow__copy">
-          <span className="eyebrow">App S3Bank</span>
+          <span className="eyebrow">S3Bank</span>
           <h2>Seu extrato, em tempo real, sem esperar o app carregar.</h2>
           <p>
             Acompanhe entradas, saídas e rendimento diário num painel único.
@@ -36,7 +36,7 @@ export default function AppShowcase() {
           <div className="appshow__panel-head">
             <span>Saldo disponível</span>
             <strong>R$ 8.412,67</strong>
-            <span className="appshow__yield">rendendo 100% do CDI hoje</span>
+            <span className="appshow__yield">rendendo 115% do CDI hoje</span>
           </div>
 
           <div className="appshow__movements">

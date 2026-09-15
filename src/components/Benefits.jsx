@@ -13,8 +13,8 @@ const BENEFITS = [
   },
   {
     n: '03',
-    title: 'Cartão físico em metal',
-    text: 'Escolha entre Bronze, Prata, Ouro ou Diamante. Peso, acabamento e função por conta e ordem.',
+    title: 'Cartão digital ',
+    text: 'Escolha entre Bronze, Prata, Ouro ou Diamante.',
   },
   {
     n: '04',

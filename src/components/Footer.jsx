@@ -4,7 +4,7 @@ import './Footer.css'
 const COLUMNS = [
   {
     title: 'Produto',
-    links: ['Conta digital', 'Cartão de metal', 'Rendimento', 'App S3Bank'],
+    links: ['Conta digital', 'Cartão digital', 'Rendimento', 'App S3Bank'],
   },
   {
     title: 'Empresa',

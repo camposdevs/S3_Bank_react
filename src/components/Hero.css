@@ -61,7 +61,6 @@
   max-width: 120px;
 }
 
-/* ---- Palco do cartão (elemento assinatura) ---- */
 .hero__stage-wrap {
   display: flex;
   flex-direction: column;
@@ -83,7 +82,7 @@
 .hero__stage-glow {
   position: absolute;
   inset: 8%;
-  background: var(--glow, #6f42c1);
+  background: var(--glow, #7b61ff);
   filter: blur(70px);
   opacity: 0.35;
   border-radius: 50%;
@@ -107,6 +106,15 @@
 .hero__card img {
   width: 100%;
   display: block;
+}
+
+.hero__stage-rate {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--s3-muted);
 }
 
 .hero__tiers {

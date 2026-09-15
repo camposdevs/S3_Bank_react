@@ -13,7 +13,10 @@ export default function LogoStrip() {
     <div className="logostrip">
       <div className="container logostrip__row">
         {ITEMS.map((item) => (
-          <span key={item} className="logostrip__item">{item}</span>
+          <span key={item} className="logostrip__item">
+            <span className="logostrip__dot" aria-hidden="true" />
+            {item}
+          </span>
         ))}
       </div>
     </div>

@@ -4,6 +4,12 @@
   border-top: 1px solid var(--s3-line);
   border-bottom: 1px solid var(--s3-line);
   padding: var(--space-5) 0;
+  background: linear-gradient(
+    90deg,
+    rgba(111, 66, 193, 0.06) 0%,
+    rgba(51, 85, 211, 0.06) 50%,
+    rgba(30, 43, 136, 0.06) 100%
+  );
 }
 
 .logostrip__row {
@@ -14,11 +20,29 @@
 }
 
 .logostrip__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-family: var(--font-mono);
   font-size: 12.5px;
-  letter-spacing: 0.04em;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   color: var(--s3-muted-2);
   white-space: nowrap;
+  transition: color 0.25s ease;
+}
+
+.logostrip__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6F42C1, #3355D3);
+  flex-shrink: 0;
+}
+
+.logostrip__item:hover {
+  color: #F5F5FA;
 }
 
 @media (max-width: 720px) {

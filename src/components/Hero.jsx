@@ -6,10 +6,10 @@ import cardDiamante from '../assets/card-diamante.jpg'
 import './Hero.css'
 
 const TIERS = [
-  { id: 'bronze', label: 'Bronze', img: cardBronze, glow: '#d61f7a' },
-  { id: 'prata', label: 'Prata', img: cardPrata, glow: '#c0c0c0' },
-  { id: 'ouro', label: 'Ouro', img: cardOuro, glow: '#cba15c' },
-  { id: 'diamante', label: 'Diamante', img: cardDiamante, glow: '#6f8bff' },
+  { id: 'bronze', label: 'Bronze', img: cardBronze, glow: '#CD7F32', rate: '100% do CDI' },
+  { id: 'prata', label: 'Prata', img: cardPrata, glow: '#C0C0C8', rate: '115% do CDI' },
+  { id: 'ouro', label: 'Ouro', img: cardOuro, glow: '#D4AF37', rate: '130% do CDI' },
+  { id: 'diamante', label: 'Diamante', img: cardDiamante, glow: '#7B61FF', rate: '140% do CDI' },
 ]
 
 export default function Hero() {
@@ -36,21 +36,22 @@ export default function Hero() {
     <section className="hero">
       <div className="container hero__row">
         <div className="hero__copy">
-          <span className="eyebrow">Conta digital · Cartão de metal</span>
+          <span className="eyebrow">Conta digital gamificada · Rende até 140% do CDI</span>
           <h1>
-            O banco que se
+            Seu dinheiro sobe
             <br />
-            <span className="hero__gradient">forja no seu ritmo.</span>
+            <span className="hero__gradient">de nível com você!</span>
           </h1>
           <p className="hero__lead">
-            Abra sua conta em minutos, escolha o cartão de metal que combina com
-            você e acompanhe cada centavo em tempo real. Sem tarifa de manutenção,
-            sem anuidade, sem letras miúdas.
+            Comece no Bronze rendendo 100% do CDI e evolua até o Diamante, com
+            até 140% do CDI, guardando dinheiro com constância. Seu cartão de
+            débito muda de cor a cada nível — sem tarifa de manutenção, sem
+            anuidade, sem letras miúdas.
           </p>
 
           <div className="hero__actions">
             <a href="#abrir-conta" className="btn btn-primary">Abrir minha conta</a>
-            <a href="#cartoes" className="btn btn-ghost">Ver os cartões</a>
+            <a href="#cartoes" className="btn btn-ghost">Ver os níveis</a>
           </div>
 
           <div className="hero__stats">
@@ -59,12 +60,12 @@ export default function Hero() {
               <span>tarifa de manutenção</span>
             </div>
             <div>
-              <strong>100%</strong>
-              <span>digital, do cadastro ao cartão</span>
+              <strong>140%</strong>
+              <span>do CDI no nível Diamante</span>
             </div>
             <div>
-              <strong>24/7</strong>
-              <span>suporte no app</span>
+              <strong>4</strong>
+              <span>níveis pra evoluir seu rendimento</span>
             </div>
           </div>
         </div>
@@ -84,11 +85,13 @@ export default function Hero() {
                 transform: `rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
               }}
             >
-              <img src={tier.img} alt={`Cartão S3Bank ${tier.label}`} />
+              <img src={tier.img} alt={`Cartão S3 Bank ${tier.label}`} />
             </div>
           </div>
 
-          <div className="hero__tiers" role="tablist" aria-label="Escolha o cartão">
+          <p className="hero__stage-rate">{tier.rate}</p>
+
+          <div className="hero__tiers" role="tablist" aria-label="Escolha o nível">
             {TIERS.map((t) => (
               <button
                 key={t.id}

@@ -9,42 +9,38 @@ const TIERS = [
     id: 'bronze',
     name: 'Bronze',
     img: cardBronze,
-    price: 'Grátis',
-    accent: '#d61f7a',
-    cashback: '0,5%',
-    highlight: 'Pra começar sem custo nenhum',
-    features: ['Cartão físico em metal', 'PIX ilimitado', 'Rendimento 100% CDI', 'Cashback em compras selecionadas'],
+    rate: '100% do CDI',
+    accent: '#CD7F32',
+    highlight: 'Seu ponto de partida — já rendendo o CDI inteiro',
+    features: ['Cartão de débito digital', 'PIX ilimitado', 'Rendimento 100% do CDI', 'Sem anuidade, sem mensalidade'],
   },
   {
     id: 'prata',
     name: 'Prata',
     img: cardPrata,
-    price: 'Grátis',
-    accent: '#c0c0c0',
-    cashback: '1%',
-    highlight: 'Mais cashback, mesma anuidade zero',
-    features: ['Tudo do plano Bronze', 'Cashback em todas as compras', 'Saques grátis 2x ao mês', 'Prioridade no atendimento'],
+    rate: '115% do CDI',
+    accent: '#C0C0C8',
+    highlight: 'Guarde com constância e destrave mais rendimento',
+    features: ['Tudo do nível Bronze', 'Rendimento 115% do CDI', 'Cartão troca de cor pra prata', 'Continua sem nenhuma taxa'],
   },
   {
     id: 'ouro',
     name: 'Ouro',
     img: cardOuro,
-    price: 'R$ 24,90/mês',
-    accent: '#cba15c',
-    cashback: '2%',
-    highlight: 'Para quem usa o cartão como principal',
-    features: ['Tudo do plano Prata', 'Sala VIP em aeroportos', 'Seguro viagem incluso', 'Gerente dedicado no app'],
+    rate: '130% do CDI',
+    accent: '#D4AF37',
+    highlight: 'Pra quem já fez do hábito de guardar uma rotina',
+    features: ['Tudo do nível Prata', 'Rendimento 130% do CDI', 'Cartão em acabamento dourado', 'Sem anuidade, sem letras miúdas'],
     featured: true,
   },
   {
     id: 'diamante',
     name: 'Diamante',
     img: cardDiamante,
-    price: 'R$ 49,90/mês',
-    accent: '#6f8bff',
-    cashback: '3%',
-    highlight: 'O topo da linha S3Bank',
-    features: ['Tudo do plano Ouro', 'Concierge 24h', 'Acesso antecipado a produtos', 'Convites para eventos S3'],
+    rate: '140% do CDI',
+    accent: '#7B61FF',
+    highlight: 'O maior rendimento da linha S3 Bank',
+    features: ['Tudo do nível Ouro', 'Rendimento 140% do CDI', 'Cartão em acabamento Diamante', 'Sem anuidade, sem mensalidade'],
   },
 ]
 
@@ -53,9 +49,13 @@ export default function CardTiers() {
     <section className="section tiers" id="cartoes">
       <div className="container">
         <div className="section-head">
-          <span className="eyebrow">Cartões</span>
-          <h2>Quatro ligas de metal. Um só compromisso: sem anuidade escondida.</h2>
-          <p>Todos os cartões são físicos, em metal escovado, com chip, aproximação e função crédito e débito na mesma conta.</p>
+          <span className="eyebrow">Níveis</span>
+          <h2>Quatro níveis de rendimento. Nenhuma mensalidade em nenhum deles.</h2>
+          <p>
+            Você não escolhe nem paga por um nível — você evolui guardando
+            dinheiro com constância. Cada nível sobe seu rendimento sobre o
+            CDI e muda a cor do seu cartão de débito digital.
+          </p>
         </div>
 
         <div className="tiers__grid">
@@ -65,18 +65,18 @@ export default function CardTiers() {
               className={`tiers__card ${t.featured ? 'is-featured' : ''}`}
               style={{ '--accent': t.accent }}
             >
-              {t.featured && <span className="tiers__badge">Mais escolhido</span>}
+              {t.featured && <span className="tiers__badge">Nível mais alcançado</span>}
 
               <div className="tiers__img">
-                <img src={t.img} alt={`Cartão S3Bank ${t.name}`} loading="lazy" />
+                <img src={t.img} alt={`Cartão S3 Bank ${t.name}`} loading="lazy" />
               </div>
 
               <h3>{t.name}</h3>
               <p className="tiers__highlight">{t.highlight}</p>
 
               <div className="tiers__price">
-                <span>{t.price}</span>
-                <small>cashback de {t.cashback}</small>
+                <span>{t.rate}</span>
+                <small>sem mensalidade</small>
               </div>
 
               <ul className="tiers__list">
@@ -86,7 +86,7 @@ export default function CardTiers() {
               </ul>
 
               <a href="#abrir-conta" className={`btn ${t.featured ? 'btn-primary' : 'btn-ghost'} tiers__cta`}>
-                Quero o {t.name}
+                Abrir minha conta
               </a>
             </article>
           ))}

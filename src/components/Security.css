@@ -1,8 +1,5 @@
-/* Security.css */
-
-.security {
-  background: #0B0B12;
-  padding: 96px 0;
+section.security {
+  padding: var(--space-9) 0;
   position: relative;
   overflow: hidden;
 }
@@ -18,57 +15,22 @@
   pointer-events: none;
 }
 
-.security .container {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 0 24px;
-  position: relative;
-  z-index: 1;
-}
-
 .security__row {
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: var(--space-7);
+  position: relative;
+  z-index: 1;
 }
 
 .security__head {
   max-width: 640px;
 }
 
-.security .eyebrow {
-  display: inline-block;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  background: linear-gradient(135deg, #6F42C1, #3355D3);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  margin-bottom: 12px;
-}
-
-.security__head h2 {
-  color: #F5F5FA;
-  font-size: clamp(28px, 4vw, 40px);
-  font-weight: 800;
-  line-height: 1.2;
-  letter-spacing: -0.5px;
-  margin: 0 0 16px;
-}
-
-.security__head p {
-  color: #A3A3B2;
-  font-size: 16px;
-  line-height: 1.6;
-  margin: 0;
-}
-
 .security__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: var(--space-4);
 }
 
 @media (max-width: 960px) {
@@ -84,16 +46,15 @@
 }
 
 .security__item {
-  background: #16161F;
-  border: 1px solid #2A2A3A;
-  border-radius: 20px;
-  padding: 28px 24px;
+  background: var(--s3-surface, #16161F);
+  border: 1px solid var(--s3-line);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
   transition: border-color 0.25s ease, transform 0.25s ease, background 0.25s ease;
 }
 
 .security__item:hover {
   border-color: rgba(111, 66, 193, 0.5);
-  background: #1F1F2C;
   transform: translateY(-4px);
 }
 
@@ -101,7 +62,7 @@
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  margin-bottom: 18px;
+  margin-bottom: var(--space-4);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -111,15 +72,15 @@
 }
 
 .security__item h3 {
-  color: #F5F5FA;
+  color: var(--s3-white);
   font-size: 17px;
   font-weight: 700;
-  margin: 0 0 10px;
+  margin: 0 0 var(--space-2);
   line-height: 1.35;
 }
 
 .security__item p {
-  color: #A3A3B2;
+  color: var(--s3-muted);
   font-size: 14px;
   line-height: 1.6;
   margin: 0;
@@ -128,13 +89,13 @@
 .security__badge {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: var(--space-2);
   align-self: flex-start;
-  padding: 10px 18px;
+  padding: 10px var(--space-4);
   border-radius: 999px;
-  background: #16161F;
-  border: 1px solid #2A2A3A;
-  color: #A3A3B2;
+  background: var(--s3-surface, #16161F);
+  border: 1px solid var(--s3-line);
+  color: var(--s3-muted);
   font-size: 13px;
   font-weight: 600;
 }

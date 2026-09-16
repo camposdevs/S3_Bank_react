@@ -3,9 +3,9 @@ import './LogoStrip.css'
 const ITEMS = [
   'Regulado pelo Banco Central',
   'FGC até R$ 250 mil',
-  'Mastercard World',
+  'Cartão Mastercard',
   'PIX ilimitado',
-  'Open Finance',
+  'Rendimento até 140% do CDI',
 ]
 
 export default function LogoStrip() {

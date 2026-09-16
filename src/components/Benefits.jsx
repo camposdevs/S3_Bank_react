@@ -3,8 +3,8 @@ import './Benefits.css'
 const BENEFITS = [
   {
     n: '01',
-    title: 'Rendimento automático',
-    text: 'Todo o saldo da sua conta rende 100% do CDI, todos os dias, sem precisar mover um centavo.',
+    title: 'Rendimento que evolui com você',
+    text: 'Comece rendendo 100% do CDI e suba até 140% guardando dinheiro com constância — sem mover um centavo pra outro lugar.',
   },
   {
     n: '02',
@@ -13,13 +13,13 @@ const BENEFITS = [
   },
   {
     n: '03',
-    title: 'Cartão digital ',
-    text: 'Escolha entre Bronze, Prata, Ouro ou Diamante.',
+    title: 'Guardar Dinheiro',
+    text: 'Crie caixinhas com metas próprias e acompanhe o progresso — cada aporte também te aproxima do próximo nível.',
   },
   {
     n: '04',
-    title: 'Cashback em compras',
-    text: 'Parte do que você gasta com o cartão volta pra sua conta automaticamente, sem cadastro extra.',
+    title: 'Cartão digital que muda com seu nível',
+    text: 'Seu cartão de débito troca de cor automaticamente conforme você evolui do Bronze ao Diamante.',
   },
 ]
 
@@ -28,7 +28,7 @@ export default function Benefits() {
     <section className="section benefits" id="beneficios">
       <div className="container">
         <div className="section-head">
-          <span className="eyebrow">Por que o S3Bank</span>
+          <span className="eyebrow">Por que o S3 Bank</span>
           <h2>Feito pra quem quer ver o dinheiro trabalhar, não sumir em tarifa.</h2>
         </div>
 

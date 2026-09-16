@@ -1,3 +1,7 @@
+section.cta {
+  padding: var(--space-8) 0 var(--space-9);
+}
+
 .cta__box {
   position: relative;
   text-align: center;

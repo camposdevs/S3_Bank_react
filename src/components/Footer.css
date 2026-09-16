@@ -5,6 +5,16 @@
   padding-top: var(--space-8);
 }
 
+.footer::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 160px;
+  height: 2px;
+  background: linear-gradient(90deg, #6F42C1, #3355D3, #1E2B88);
+}
+
 .footer__top {
   display: grid;
   grid-template-columns: 1.2fr 2fr;
@@ -13,8 +23,7 @@
 }
 
 .footer__brand img {
-  height: 18px;
-  filter: invert(1) brightness(2);
+  height: 22px;
 }
 
 .footer__brand p {
@@ -46,6 +55,7 @@
 }
 
 .footer__col a {
+  position: relative;
   font-size: 13.5px;
   color: var(--s3-muted);
   transition: color 0.25s var(--ease-out);

@@ -22,8 +22,8 @@ export default function Header() {
   return (
     <header className={`header ${scrolled ? 'header--scrolled' : ''}`}>
       <div className="container header__row">
-        <a href="#" className="header__brand" aria-label="S3Bank">
-          <img src={logo} alt="S3Bank" />
+        <a href="#" className="header__brand" aria-label="S3 Bank">
+          <img src={logo} alt="S3 Bank" />
         </a>
 
         <nav className="header__nav" aria-label="Navegação principal">

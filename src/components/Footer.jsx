@@ -4,11 +4,11 @@ import './Footer.css'
 const COLUMNS = [
   {
     title: 'Produto',
-    links: ['Conta digital', 'Cartão digital', 'Rendimento', 'App S3Bank'],
+    links: ['Conta digital', 'Cartão digital', 'Guardar Dinheiro', 'Pix'],
   },
   {
     title: 'Empresa',
-    links: ['Sobre o S3Bank', 'Carreiras', 'Imprensa', 'Blog'],
+    links: ['Sobre o S3 Bank', 'Carreiras', 'Imprensa', 'Blog'],
   },
   {
     title: 'Ajuda',
@@ -25,9 +25,9 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer__top">
         <div className="footer__brand">
-          <img src={logo} alt="S3Bank" />
+          <img src={logo} alt="S3 Bank" />
           <p>
-            S3Bank Instituição de Pagamento S.A. — CNPJ 00.000.000/0001-00.
+            S3 Bank Instituição de Pagamento S.A. — CNPJ 00.000.000/0001-00.
             Autorizada a funcionar pelo Banco Central do Brasil.
           </p>
         </div>
@@ -47,7 +47,7 @@ export default function Footer() {
       </div>
 
       <div className="container footer__bottom">
-        <span>© {new Date().getFullYear()} S3Bank. Todos os direitos reservados.</span>
+        <span>© {new Date().getFullYear()} S3 Bank. Todos os direitos reservados.</span>
         <span>Ouvidoria: 0800 000 0000</span>
       </div>
     </footer>

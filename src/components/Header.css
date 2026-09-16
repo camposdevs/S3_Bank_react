@@ -23,7 +23,6 @@
 .header__brand img {
   height: 20px;
   width: auto;
-  filter: invert(1) brightness(2);
 }
 
 .header__nav {

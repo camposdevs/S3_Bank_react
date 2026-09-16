@@ -1,3 +1,7 @@
+section.appshow {
+  padding: var(--space-8) 0;
+}
+
 .appshow__row {
   display: grid;
   grid-template-columns: 1fr 1fr;

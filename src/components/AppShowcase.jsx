@@ -4,7 +4,7 @@ const MOVEMENTS = [
   { label: 'Recebido de João P.', tag: 'PIX', value: '+ R$ 1.250,00', positive: true },
   { label: 'Assinatura streaming', tag: 'Débito', value: '- R$ 39,90' },
   { label: 'Rendimento do dia', tag: 'CDI', value: '+ R$ 4,12', positive: true },
-  { label: 'Mercado Sul', tag: 'Crédito', value: '- R$ 186,30' },
+  { label: 'Guardado em Viagem', tag: 'Guardar Dinheiro', value: '- R$ 150,00' },
 ]
 
 export default function AppShowcase() {
@@ -12,18 +12,18 @@ export default function AppShowcase() {
     <section className="section appshow" id="app">
       <div className="container appshow__row">
         <div className="appshow__copy">
-          <span className="eyebrow">S3Bank</span>
+          <span className="eyebrow">S3 Bank</span>
           <h2>Seu extrato, em tempo real, sem esperar o app carregar.</h2>
           <p>
             Acompanhe entradas, saídas e rendimento diário num painel único.
-            Bloqueie o cartão, ajuste limites e organize gastos por categoria
-            direto da tela inicial — sem menus escondidos.
+            Bloqueie o cartão na hora e acompanhe suas caixinhas de Guardar
+            Dinheiro — tudo direto da tela inicial, sem menus escondidos.
           </p>
 
           <ul className="appshow__list">
             <li>Notificação instantânea a cada movimentação</li>
-            <li>Cartão virtual gerado na hora, pronto pra usar</li>
-            <li>Cofrinhos com objetivo e data</li>
+            <li>Bloqueio e desbloqueio do cartão na hora, pelo app</li>
+            <li>Cartão digital que troca de cor a cada nível</li>
           </ul>
 
           <div className="appshow__stores">

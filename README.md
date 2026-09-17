@@ -1,98 +1,65 @@
-# S3Bank — Site institucional
+<div align="center">
 
-Landing page da conta digital S3Bank, construída em React + Vite, inspirada na
-linguagem visual de bancos digitais brasileiros (Itaú / C6 Bank), com a
-paleta de marca do S3Bank (roxo → azul → cobalto).
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:6F42C1,50:3355D3,100:1E2B88&height=200&section=header&text=S3Bank&fontSize=42&fontColor=FFFFFF&fontAlignY=38&desc=Conta%20Digital%20Gamificada&descAlignY=58&descSize=20&descColor=E5E7EB" width="100%" />
 
-## Como rodar
+</div>
 
-Pré-requisito: [Node.js](https://nodejs.org) 18 ou superior instalado.
+# S3Bank — Site Institucional
 
-```bash
-# 1. Entrar na pasta do projeto
-cd s3bank
+Bem-vindo ao **S3Bank**!
 
-# 2. Instalar as dependências
-npm install
+Este projeto é a landing page oficial de uma conta digital gamificada, desenvolvida como parte do meu Trabalho de Conclusão de Curso (TCC). O objetivo é apresentar a proposta de valor do produto — níveis de rendimento, cartões e benefícios — com uma interface moderna, inspirada na linguagem visual dos grandes bancos digitais brasileiros.
 
-# 3. Rodar em modo desenvolvimento
-npm run dev
-```
+🌐 **Acesse o Projeto:**
+🔗 https://s3bank.netlify.app/
 
-O terminal vai mostrar um endereço parecido com `http://localhost:5173` —
-abra no navegador.
+---
 
-## Gerar a versão de produção
+## 📖 Sobre o Projeto
 
-```bash
-npm run build
-```
+O **S3Bank** propõe uma nova forma de guardar dinheiro: quanto mais consistência o usuário tem ao poupar, mais ele sobe de nível — e mais benefícios desbloqueia. O site institucional traduz esse conceito em uma experiência visual imersiva, com foco em:
 
-Isso cria a pasta `dist/` com o site pronto para publicar em qualquer
-hospedagem estática (Vercel, Netlify, Cloudflare Pages, etc).
+* **Identidade Visual Própria:** Gradiente de marca (roxo → azul → cobalto) aplicado de forma consistente em toda a página.
+* **Cartão 3D Interativo:** Elemento de destaque na Hero, reforçando a sensação de produto físico e premium.
+* **Comparativo de Níveis:** Apresentação clara da jornada Bronze → Prata → Ouro → Diamante e dos benefícios de cada um.
+* **Prova Social & Segurança:** Seções dedicadas a credibilidade regulatória e proteção dos dados do usuário.
+* **Design 100% Responsivo:** Layout adaptado para desktop e mobile, do menu à chamada final de conversão.
 
-Para conferir o resultado do build localmente:
+---
 
-```bash
-npm run preview
-```
+## 🛠️ Tecnologias Utilizadas
 
-## Estrutura do projeto
+### **Front-end**
+* **React 18** (Biblioteca de UI)
+* **Vite** (Build tool e Dev Server)
+* **CSS Modules / CSS Variables** (Design tokens e temas)
+* **Google Fonts** (Tipografia da marca)
 
-```
-s3bank/
-├── index.html              # HTML base + fontes (Google Fonts)
-├── package.json
-├── vite.config.js
-└── src/
-    ├── main.jsx             # Ponto de entrada do React
-    ├── App.jsx              # Monta a ordem das seções da página
-    ├── index.css            # Estilos globais e utilitários (.btn, .section...)
-    ├── styles/
-    │   └── tokens.css        # Paleta de cores, tipografia, espaçamentos
-    ├── assets/               # Imagens dos cartões e logo
-    └── components/
-        ├── Header.jsx/.css       # Cabeçalho fixo + menu mobile
-        ├── Hero.jsx/.css         # Abertura + cartão 3D interativo
-        ├── LogoStrip.jsx/.css    # Faixa de credibilidade (Bacen, FGC...)
-        ├── Benefits.jsx/.css     # Grade de diferenciais
-        ├── CardTiers.jsx/.css    # Comparativo Bronze/Prata/Ouro/Diamante
-        ├── AppShowcase.jsx/.css  # Mockup do extrato do app
-        ├── Security.jsx/.css     # Seção de segurança/regulação
-        ├── FinalCTA.jsx/.css     # Chamada final para abrir conta
-        └── Footer.jsx/.css       # Rodapé
-```
+### **Ferramentas & Deploy**
+* **Git & GitHub** (Controle de versão)
+* **Netlify 
 
-## Paleta de cores (tokens)
+---
 
-Definida em `src/styles/tokens.css`:
+## ✨ Funcionalidades
 
-| Token             | Hex       | Uso                                   |
-|-------------------|-----------|----------------------------------------|
-| `--s3-violet`      | `#6F42C1` | Início do gradiente de marca           |
-| `--s3-blue`        | `#3355D3` | Meio do gradiente de marca             |
-| `--s3-cobalt`      | `#1E2B88` | Final do gradiente de marca            |
-| `--s3-bg`          | `#0A0B14` | Fundo geral do site                    |
-| `--s3-gold`        | `#CBA15C` | Acento do cartão Ouro                  |
-| `--s3-silver`      | `#C0C0C0` | Acento do cartão Prata                 |
-| `--s3-magenta`     | `#D61F7A` | Acento do cartão Bronze                |
+✔️ **Header Fixo & Menu Mobile:** Navegação persistente com adaptação total para telas menores.
+✔️ **Hero com Cartão 3D:** Abertura de impacto com elemento interativo em destaque.
+✔️ **Faixa de Credibilidade:** Selos e menções institucionais (Bacen, FGC) logo abaixo da dobra.
+✔️ **Grade de Diferenciais:** Apresentação dos principais benefícios do produto.
+✔️ **Comparativo de Cartões:** Visualização lado a lado dos níveis Bronze, Prata, Ouro e Diamante.
+✔️ **Mockup do App:** Demonstração visual do extrato e da experiência dentro do aplicativo.
+✔️ **Seção de Segurança:** Reforço de confiança sobre regulação e proteção de dados.
+✔️ **Chamada Final de Conversão:** Formulário de abertura de conta ao final da jornada.
 
-## Personalizando conteúdo
+---
 
-- **Textos**: cada seção tem seu conteúdo direto no `.jsx` (arrays como
-  `TIERS`, `BENEFITS`, `MOVEMENTS`) — edite ali, sem precisar mexer no CSS.
-- **Imagens dos cartões**: troque os arquivos em `src/assets/` mantendo o
-  mesmo nome, ou atualize o `import` no componente correspondente.
-- **Cores**: mude os valores em `src/styles/tokens.css` — como são variáveis
-  CSS, a mudança se propaga para o site inteiro.
-- **Link de "Abrir conta"**: o formulário final (`FinalCTA.jsx`) está com
-  `onSubmit` de exemplo — troque pelo endpoint real da sua API quando tiver.
+© 2026 — Todos os direitos reservados.
 
-## Próximos passos sugeridos
+<div align="center">
 
-1. Trocar textos institucionais (CNPJ, ouvidoria, termos) pelos dados reais.
-2. Conectar o formulário de abertura de conta a um backend/CRM.
-3. Adicionar páginas internas (Termos, Privacidade) com React Router, se
-   o site crescer além de uma landing page única.
-4. Rodar um Lighthouse/PageSpeed antes de publicar para checar performance.
-"# S3-Bank-demo-react" 
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1E2B88,50:3355D3,100:6F42C1&height=100&section=footer" width="100%" />
+
+**Desenvolvido para o TCC — S3Bank**
+
+</div>

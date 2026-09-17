@@ -1,3 +1,4 @@
+/* FinalCTA.css */
 section.cta {
   padding: var(--space-8) 0 var(--space-9);
 }
@@ -8,6 +9,7 @@ section.cta {
   padding: var(--space-9) var(--space-6);
   border-radius: var(--radius-lg);
   background: var(--s3-gradient-brand);
+  box-shadow: 0 30px 70px -30px rgba(51, 85, 211, 0.55);
   overflow: hidden;
 }
 
@@ -54,7 +56,7 @@ section.cta {
 }
 
 .cta__form input::placeholder {
-  color: #ffffffaa;
+  color: #ffffffcc;
 }
 
 .cta__form .btn-primary {
